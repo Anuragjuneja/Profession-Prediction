@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Profession Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"> 
+    <style>
+        /* Additional Inline Styling */
+        body {
+            background-color: #e6f7ff;
+        }
+
+        h1 {
+            font-size: 2.8rem;
+            color: #007acc;
+            margin-top: 20px;
+        }
+
+        h3 {
+            text-align: center;
+            font-size: 1.2rem;
+            color: #333;
+        }
+
+        h2 {
+            color: #007acc;
+            font-size: 2rem;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        form {
+            padding: 30px;
+            background-color: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+
+        div {
+            margin-bottom: 20px;
+        }
+
+        input[type="submit"] {
+            width: auto;
+            background-color: #007acc;
+            color: white;
+            font-size: 1.2rem;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #005f99;
+        }
+
+        /* Style for result display */
+        h2 {
+            font-size: 2.5rem;
+            color: #0a0a0a;
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <h1><u>Profession Prediction</u></h1>
+    <h3>Complete this form, and we'll assist you in discovering your ideal profession.</h3>
+    
+    <form method="POST" action="/">
+        {{ form.hidden_tag() }}
+        
+        <!-- Gender -->
+        <div>
+            {{ form.gender.label }}
+            {{ form.gender(class="inline") }}<br>
+        </div>
+        
+        <!-- Age -->
+        <div>
+            {{ form.age.label }}
+            {{ form.age() }}<br>
+        </div>
+        
+        <!-- Free Time Activity -->
+        <div>
+            {{ form.free_time_activity.label }}
+            {{ form.free_time_activity() }}<br>
+        </div>
+        
+        <!-- Work Environment -->
+        <div>
+            {{ form.work_environment.label }}
+            {{ form.work_environment() }}<br>
+        </div>
+        
+        <!-- Tech Comfort -->
+        <div>
+            {{ form.tech_comfort.label }}
+            {{ form.tech_comfort() }}<br>
+        </div>
+        
+        <!-- Job Security Importance -->
+        <div>
+            {{ form.job_security_importance.label }}
+            {{ form.job_security_importance() }}<br>
+        </div>
+        
+        <!-- Artistic Expression Importance -->
+        <div>
+            {{ form.artistic_expression_importance.label }}
+            {{ form.artistic_expression_importance() }}<br>
+        </div>
+        
+        <!-- Physical Fitness Importance -->
+        <div>
+            {{ form.physical_fitness_importance.label }}
+            {{ form.physical_fitness_importance() }}<br>
+        </div>
+        
+        <!-- Financial Analysis Approach -->
+        <div>
+            {{ form.financial_analysis_approach.label }}
+            {{ form.financial_analysis_approach() }}<br>
+        </div>
+        
+        <!-- Programming Interest -->
+        <div>
+            {{ form.programming_interest.label }}
+            {{ form.programming_interest() }}<br>
+        </div>
+        
+        <!-- Entrepreneurship Interest -->
+        <div>
+            {{ form.entrepreneurship_interest.label }}
+            {{ form.entrepreneurship_interest() }}<br>
+        </div>
+        
+        <!-- Content Creation Enjoyment -->
+        <div>
+            {{ form.content_creation_enjoyment.label }}
+            {{ form.content_creation_enjoyment() }}<br>
+        </div>
+        
+        <!-- Public Service Passion -->
+        <div>
+            {{ form.public_service_passion.label }}
+            {{ form.public_service_passion() }}<br>
+        </div>
+        
+        <!-- Complex Concepts Explanation -->
+        <div>
+            {{ form.complex_concepts_explanation.label }}
+            {{ form.complex_concepts_explanation() }}<br>
+        </div>
+        
+        <!-- Public Speaking Comfort -->
+        <div>
+            {{ form.public_speaking_comfort.label }}
+            {{ form.public_speaking_comfort() }}<br>
+        </div>
+        
+        <!-- Tools Machinery Comfort -->
+        <div>
+            {{ form.tools_machinery_comfort.label }}
+            {{ form.tools_machinery_comfort() }}<br>
+        </div>
+        
+        <!-- Strategic Planning Enjoyment -->
+        <div>
+            {{ form.strategic_planning_enjoyment.label }}
+            {{ form.strategic_planning_enjoyment() }}<br>
+        </div>
+        
+        <!-- Experimentation Enjoyment -->
+        <div>
+            {{ form.experimentation_enjoyment.label }}
+            {{ form.experimentation_enjoyment() }}<br>
+        </div>
+        
+        <!-- Knowledge Sharing -->
+        <div>
+            {{ form.knowledge_sharing.label }}
+            {{ form.knowledge_sharing() }}<br>
+        </div>
+        
+        <!-- Helping Others Desire -->
+        <div>
+            {{ form.helping_others_desire.label }}
+            {{ form.helping_others_desire() }}<br>
+        </div>
+        
+        <!-- Medical Interest -->
+        <div>
+            {{ form.medical_interest.label }}
+            {{ form.medical_interest() }}<br>
+        </div>
+        
+        <!-- Market Trends Interest -->
+        <div>
+            {{ form.market_trends_interest.label }}
+            {{ form.market_trends_interest() }}<br>
+        </div>
+        
+        <!-- Sports Management Interest -->
+        <div>
+            {{ form.sports_management_interest.label }}
+            {{ form.sports_management_interest() }}<br>
+        </div>
+        
+        <!-- Sports Passion -->
+        <div>
+            {{ form.sports_passion.label }}
+            {{ form.sports_passion() }}<br>
+        </div>
+        
+        <!-- Finance Management Interest -->
+        <div>
+            {{ form.finance_management_interest.label }}
+            {{ form.finance_management_interest() }}<br>
+        </div>
+        
+        <!-- Technology Curiosity -->
+        <div>
+            {{ form.technology_curiosity.label }}
+            {{ form.technology_curiosity() }}<br>
+        </div>
+        
+        <!-- Educational Content Interest -->
+        <div>
+            {{ form.educational_content_interest.label }}
+            {{ form.educational_content_interest() }}<br>
+        </div>
+        
+        <!-- Fashion Interest -->
+        <div>
+            {{ form.fashion_interest.label }}
+            {{ form.fashion_interest() }}<br>
+        </div>
+        
+        <!-- Financial Statements Role -->
+        <div>
+            {{ form.financial_statements_role.label }}
+            {{ form.financial_statements_role() }}<br>
+        </div>
+        
+        <!-- Submit Button -->
+        <div>
+            {{ form.submit(class="btn btn-primary") }}
+        </div>
+    </form>
+
+    <!-- Display Result -->
+    {% if result %}
+        <h2>You should consider pursuing a career in <br><u>{{ result }}</u></h2>
+    {% endif %}
+</body>
+</html>
