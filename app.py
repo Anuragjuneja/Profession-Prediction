@@ -80,5 +80,5 @@ def index():
 
     return render_template('index.html', form=form, result=profession)
 
-if _name_ == '_main_':
+if __name__ == '__main__':
     app.run(debug=True)
