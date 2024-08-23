@@ -18,8 +18,8 @@ proff = {
 }
 
 # Load the trained model and encoders
-model = joblib.load(r'C:/Users/dell/OneDrive - Indian Institute of Technology Guwahati/Desktop/Flask/Project_prof_prediction/model_prof.joblib')
-encoders = joblib.load(r'C:/Users/dell/OneDrive - Indian Institute of Technology Guwahati/Desktop/Flask/Project_prof_prediction/encoder.joblib')
+model = joblib.load('model_prof.joblib')
+encoders = joblib.load('encoder.joblib')
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
