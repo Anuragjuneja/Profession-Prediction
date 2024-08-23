@@ -1,4 +1,4 @@
-# Profession-Prediction
+# Profession-Prediction Model
 
 ## Overview
 Many people struggle to identify their true interests and passions, often spending a significant amount of time pondering the right career path. If you’re one of those individuals, this model is here to help. By answering a few targeted questions on the site, you’ll receive personalized career recommendations.
