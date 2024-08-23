@@ -3,4 +3,3 @@ flask
 numpy
 joblib
 flask_wtf
-scikit-learn
