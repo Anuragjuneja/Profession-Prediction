@@ -19,10 +19,8 @@ proff = {
 }
 
 # Load the trained model and encoders
-with open('model_prof.joblib', 'rb') as f:
-    model = pickle.load(f)
-with open('encoder.joblib', 'rb') as g:
-    encoders = pickle.load(g)
+model = joblib.load('model_prof.joblib')
+encoders = joblib.load('encoder.joblib')
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
