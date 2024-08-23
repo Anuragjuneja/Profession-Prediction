@@ -5,7 +5,7 @@ import numpy as np
 import pandas as pd
 import pickle
 
-app = Flask(__name__)
+app = Flask(_name_)
 app.config['SECRET_KEY'] = 'your_secret_key_here'
 
 # Dictionary for mapping prediction results to professions
@@ -20,6 +20,7 @@ proff = {
 
 # Load the trained model and encoders
 model = joblib.load('model_prof.joblib')
+
 encoders = joblib.load('encoder.joblib')
 
 @app.route('/', methods=['GET', 'POST'])
@@ -64,21 +65,20 @@ def index():
         # Convert the data to a DataFrame for encoding
         data_df = pd.DataFrame([data])
         
-        try:
+        
             # Apply encoders
-            preprocessed_data = encoders.transform(data_df)
-            
+        preprocessed_data = encoders.transform(data_df)
+            # print(preprocessed_data)
             # Make prediction
-            prediction = model.predict(preprocessed_data)
-            result = int(prediction[0])
+        prediction = model.predict(preprocessed_data)
+        result = int(prediction[0])
             
             # Map the result to profession
-            profession = proff.get(result, "Unknown Profession")
-        except Exception as e:
-            # Handle any errors during prediction or mapping
-            profession = f"Error: {str(e)}"
+        profession = proff.get(result, "Unknown Profession")
+        
+           
 
     return render_template('index.html', form=form, result=profession)
 
-if __name__ == '__main__':
+if _name_ == '_main_':
     app.run(debug=True)
