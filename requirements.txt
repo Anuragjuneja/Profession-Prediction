@@ -1,6 +1,6 @@
 pandas
 flask
-numpy
+numpy == 1.26.4
 joblib
 flask_wtf
 scikit-learn
