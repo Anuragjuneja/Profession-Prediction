@@ -1,5 +1,5 @@
 pandas
 flask
 numpy
-forms
 joblib
+flask_wtf
