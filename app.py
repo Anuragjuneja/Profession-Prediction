@@ -5,7 +5,7 @@ import numpy as np
 import pandas as pd
 import pickle
 
-app = Flask(_name_)
+app = Flask(__name__)
 app.config['SECRET_KEY'] = 'your_secret_key_here'
 
 # Dictionary for mapping prediction results to professions
