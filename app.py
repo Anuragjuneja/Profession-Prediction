@@ -3,6 +3,7 @@ from forms import ProfessionPredictionForm
 import joblib
 import numpy as np
 import pandas as pd
+import pickle
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'your_secret_key_here'
@@ -18,8 +19,10 @@ proff = {
 }
 
 # Load the trained model and encoders
-model = joblib.load('model_prof.joblib')
-encoders = joblib.load('encoder.joblib')
+with open('model_prof.joblib', 'rb') as f:
+    model = pickle.load(f)
+with open('encoder.joblib', 'rb') as g:
+    encoders = pickle.load(g)
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
