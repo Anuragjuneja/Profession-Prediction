@@ -7,10 +7,10 @@ Many people struggle to identify their true interests and passions, often spendi
 This project utilizes a **Random Forest Classifier** to predict the most suitable profession for you. The model has been trained to classify users into one of **six different professions' field** based on their responses to a set of **28 questions**. These questions cover various aspects of your interests, skills, and hobbies. The data used to train the model was collected via a Google Form, ensuring a diverse range of inputs.
 
 ## How to Use
-1. Visit the site: [Profession Prediction](https://professionprediction-bffrbmgvaccdcqch.southeastasia-01.azurewebsites.net)  
-2. Answer the 28 questions presented on the page.  
-3. Submit your responses.  
-4. Review the profession suggestions provided by the model.
+1. Visit the site: [Profession Prediction](https://professionprediction-bffrbmgvaccdcqch.southeastasia-01.azurewebsites.net) if this site doesn't work then click [here](https://profession-prediction-1.onrender.com/)
+3. Answer the 28 questions presented on the page.  
+4. Submit your responses.  
+5. Review the profession suggestions provided by the model.
 
 ## Features
 - **Random Forest Classifier:** Employs a robust machine learning algorithm for accurate predictions.  
