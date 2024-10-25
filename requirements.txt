@@ -4,3 +4,4 @@ numpy == 1.26.4
 joblib
 flask_wtf
 scikit-learn
+gunicorn==22.0.0
